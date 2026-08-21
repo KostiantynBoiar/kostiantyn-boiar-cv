@@ -78,7 +78,7 @@ export const roles: Role[] = [
   {
     company: 'OpenWeather',
     role: 'Back-End Developer',
-    start: 'May 2024',
+    start: 'April 2025',
     end: '— Present',
     location: 'London, remote',
     bullets: [
@@ -100,7 +100,7 @@ export const roles: Role[] = [
     company: 'Geniusee — BugsHunter',
     role: 'Back-End Developer',
     start: 'Oct 2025',
-    end: '— Present',
+    end: 'Aug 2026',
     location: 'Kyiv, remote',
     bullets: [
       'Designed an AI QA platform that generates, runs and self-heals Playwright end-to-end tests before bugs reach production.',
@@ -120,7 +120,7 @@ export const roles: Role[] = [
   {
     company: 'Geniusee — ProrataAds',
     role: 'Back-End Developer',
-    start: 'Apr 2024',
+    start: 'Apr 2025',
     end: '— Oct 2025',
     location: 'Kyiv, remote',
     bullets: [

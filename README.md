@@ -77,3 +77,46 @@ experienceLayout: 'Prose' // starting layout; visitors can switch to 'Ledger'
 IBM Plex Mono is self-hosted from `public/fonts/` — the exact woff2 subsets from
 the design, with their original `unicode-range` declarations, so Cyrillic and
 Latin-Extended text render correctly with no external requests.
+
+## Deployment
+
+Pushing to `main`/`master` builds the site and publishes it to GitHub Pages via
+`.github/workflows/deploy.yml`. The site lands at:
+
+```
+https://kostiantynboiar.github.io/kostiantyn-boiar-cv/
+```
+
+**One-time setup:** in the repository on GitHub, go to
+**Settings → Pages → Build and deployment** and set **Source** to
+**GitHub Actions**. Without this the workflow builds but never publishes.
+
+### The base path
+
+GitHub Pages serves a project repository from `/<repo>/`, not from the domain
+root, so `vite.config.ts` sets:
+
+```ts
+const base = '/kostiantyn-boiar-cv/'
+```
+
+Vite rewrites the font and bundle URLs to match; the PDF links are relative and
+resolve against the page URL. **If you move the site, change this one line:**
+
+| Where the site lives | `base` |
+| --- | --- |
+| `kostiantynboiar.github.io/kostiantyn-boiar-cv/` (now) | `'/kostiantyn-boiar-cv/'` |
+| A custom domain, e.g. `boiar.dev` | `'/'` |
+| A `kostiantynboiar.github.io` repo | `'/'` |
+
+Getting this wrong shows a blank page with 404s on the JS and CSS — that is
+almost always a `base` mismatch.
+
+`npm run dev` also serves under the base path
+(`http://localhost:5173/kostiantyn-boiar-cv/`), which keeps development honest
+about how production resolves URLs.
+
+### Custom domain
+
+Add a `CNAME` file to `public/` containing the bare domain, set `base` to `'/'`,
+and point a DNS `CNAME` record at `kostiantynboiar.github.io`.
