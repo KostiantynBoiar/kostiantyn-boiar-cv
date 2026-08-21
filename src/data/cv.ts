@@ -83,13 +83,13 @@ export const roles: Role[] = [
     location: 'London, remote',
     bullets: [
       'Led the migration of 85% of core infrastructure from Go to Python, cutting codebase complexity by 40%.',
-      'Built high-load forecast services holding sub-200ms responses across 50M+ daily API requests for 250+ enterprise clients.',
+      'Built high-load forecast services holding sub-200ms responses across 20B+ daily API requests for 250+ enterprise clients.',
       'Researched and shipped a forecast-blending algorithm that improved model accuracy by up to 20%.',
     ],
     summary:
       'High-load forecast APIs for enterprise clients; led the Go → Python migration of core infrastructure and the forecast-blending research behind model accuracy.',
     metrics: [
-      { value: '50M+', label: 'Daily API requests' },
+      { value: '20B+', label: 'Daily API requests' },
       { value: '<200ms', label: 'Response at peak' },
       { value: '+20%', label: 'Forecast accuracy' },
     ],
@@ -126,7 +126,7 @@ export const roles: Role[] = [
     bullets: [
       'Built an AI enrichment service for Prorata.ai running thousands of requests daily at 99.8% accuracy.',
       'Accelerated the application by 70% through embedding reuse, cutting compute spend by $25,000 a month.',
-      'Designed an ORM-free architecture on raw SQL: 45% faster queries and 60% lower memory across 15+ tables.',
+      'Designed an ORM-free architecture on raw SQL: 45% faster queries and 60% lower memory across tables.',
     ],
     summary:
       'AI ad-enrichment service for Prorata.ai, built on an ORM-free raw-SQL core with async connection pooling.',
