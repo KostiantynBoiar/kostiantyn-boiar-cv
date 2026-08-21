@@ -17,8 +17,8 @@ export default function App() {
       <div className="mx-auto max-w-[880px]">
         <SiteHeader />
         <Hero />
-        <Research onOpenPdf={setPdf} />
         <Experience />
+        <Research onOpenPdf={setPdf} />
         <Projects />
         <Stack />
         <Education />
